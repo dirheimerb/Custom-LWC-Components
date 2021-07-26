@@ -1,0 +1,12 @@
+{
+    {
+    "name": "admin-console", 
+    "version": "1.0.0", 
+    "discriptions": "Controls for API Call outs"
+},
+{
+    "author": "Brad Dirheimer", 
+    "license": "ISC", 
+    "repository": "https://github.com/dirheimerb/Custom-LWC-Components"
+}
+}

@@ -1,0 +1,42 @@
+<template>
+    <lightning-card>
+        <header class="slds-modal__header">
+            <h3 slot="title" class="slds-modal__title slds-hyphenate">DQ Validation Serivce</h3>
+        </header>
+        <!--<lightning-quick-action-panel header="DQ Validation Serivce">-->
+        <div class="slds-modal__content slds-var-p-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <div class="slds-form-element slds-box slds-box_x-small slds-size_2-of-3">
+                        <label class="slds-checkbox_toggle slds-grid">
+                            <span class="slds-form-element__label slds-m-bottom_none">{dqLabel}</span>
+                            <input
+                                type="checkbox"
+                                name="checkbox-toggle-18"                                
+                                value="checkbox-toggle-18"
+                                aria-describedby="checkbox-toggle-18"
+                                checked={serviceStatus}
+                                onchange={handleServiceStatusChange}                          
+                            />
+                            <span id="checkbox-toggle-18" class="slds-checkbox_faux_container" aria-live="assertive">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-checkbox_on">Active</span>
+                                <span class="slds-checkbox_off">Inactive</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="slds-col">
+                    <div class="slds-form-element slds-box slds-box_xx-small slds-size_1-of-">
+                        <label class="slds-form-element__label" for="timeValue"> <abbr class="slds-required">* </abbr>"MS before Timeout for DQ Service"</label>
+                        <div class="slds-form-element__control">
+                            <input type="number" id="timeValue" value={timeout} required="" class="slds-input" onchange={handleTimeoutChange} />
+                            <p>Current timeout value is set at: {timeout}</p>                                                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</lightning-quick-action-panel>-->
+    </lightning-card>
+</template>
